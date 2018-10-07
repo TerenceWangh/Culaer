@@ -11,13 +11,13 @@ TensorFlow程序一般可以分为两个阶段，在第一阶段定义计算图�
 
 ### 定义计算图中所有的计算：
 1. TensorFlow中维护的集合列表
-    集合名称|集合内容|使用场景
-    ---|--|---
-    tf.GraphKeys.VARIABLE|所有变量|持久化TensorFlow模型
-    tf.GraphKeys.TRAINABLE_VARIABLES|可学习的变量|模型训练、生成模型可视化内容
-    tf.GraphKeys.SUMMARIES|日志生成相关的张量|TensorFlow计算可视化
-    tf.GraphKeys.QUEUE_RUNNERS|处理输入的QueueRunner|输入处理
-    tf.GraphKeys.MOVING_AVERAGE_VARIABLES|所有计算了滑动平均值的变量|计算变量的滑动平均值
+    |集合名称|集合内容|使用场景|
+    |-|-|-|
+    |tf.GraphKeys.VARIABLE|所有变量|持久化TensorFlow模型|
+    |tf.GraphKeys.TRAINABLE_VARIABLES|可学习的变量|模型训练、生成模型可视化内容|
+    |tf.GraphKeys.SUMMARIES|日志生成相关的张量|TensorFlow计算可视化|
+    |tf.GraphKeys.QUEUE_RUNNERS|处理输入的QueueRunner|输入处理|
+    |tf.GraphKeys.MOVING_AVERAGE_VARIABLES|所有计算了滑动平均值的变量|计算变量的滑动平均值|
 
 2. TensorFlow数据模型--**张量**
     >TensorFlow计算的结果不是一个具体的数字，而是一个张量的结构。一个张量包括三个属性，**名字**、**维度**和**类型**
