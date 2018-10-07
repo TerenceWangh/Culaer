@@ -38,7 +38,7 @@ random_thumb: false
 
 
 # Content
-fancybox: true
+fancybox: false
 
 
 # Sidebar
@@ -72,7 +72,7 @@ search:
 # comment ShortName, you can choose only ONE to display.
 duoshuo_shortname: 
 disqus_shortname: 
-livere_shortname: MTAyMC8yOTQ4MS82MDQ5
+livere_shortname: 
 uyan_uid: 
 wumii: 
 
@@ -115,4 +115,4 @@ facebook_sdk:
   webmaster:    #true
 
 # CNZZ count
-cnzz_siteid: 1260716016
+cnzz_siteid: 0199403140
