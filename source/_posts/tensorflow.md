@@ -1,5 +1,6 @@
 ---
 title: Tensorflow
+date: 2018/10/14 16:28:30
 tags:
   - TensorFlow
 category: Study
