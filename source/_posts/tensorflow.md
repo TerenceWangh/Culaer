@@ -1,7 +1,8 @@
 ---
 title: Tensorflow
-tags: tensorflow
-category: study
+tags:
+  - TensorFlow
+category: Study
 ---
 
 # Tensorflow

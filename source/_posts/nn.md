@@ -1,7 +1,10 @@
 ---
 title: 神经网络
-tags: tensorflow, machine learning
-category: study
+tags: 
+  - TensorFlow
+  - Machine Learning
+  - Deep Learning
+category: Study
 ---
 
 ## 1. 激活函数去线性化
