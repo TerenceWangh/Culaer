@@ -1,1 +1,61 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<div id="index-main">
+<% page.posts.each(function(post){ %>
+  <div class="post-entry">
+    <div class="post-time"><%= date(post.date, 'YYYY-MM-D') %></div>
+    <div class="post-desc">
+      <div class="post-title">
+        <% if (post.link) { %>
+          <a href="<%- url_for(post.link) %>", targets="_blank", itemprop="url"><%= post.title %></a>
+        <% } else { %>
+          <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <% } %>
+      </div> 
+      <div class="post-content">
+        <% if (post.description) { -%>
+          <%- post.description %>
+        <% } else if (post.excerpt) { -%>
+          <%- post.excerpt %>
+        <% } else if (post.content) { -%>
+          <% var br = post.content.indexOf('</p>') %>
+          <% if (br < 0) { -%>
+            <%- post.content %>
+          <% } else { -%>
+            <%- post.content.substring(0, br + 4) %>
+          <% } -%>
+        <% } %>
+      </div>
+      <div class="post-meta">
+        <% if (post.tags && post.tags.length) { -%>
+          <div class="post-tags">
+            <%- list_tags(post.tags, {
+              show_count: false,
+              class: 'post-tag',
+              style:'none',
+              separator:'/'
+            }) %>
+          </div>
+        <% } -%>
+        <% if (post.categories && post.categories.length) { -%>
+          <div class="post-categories">
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'post-category',
+              style: 'none',
+              separator: '>'
+            }) %>
+          </div>
+        <% } -%>
+      </div>
+    </div>
+  </div>
+<% }) %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <% var prev_text = __('prev');var next_text = __('next')%>
+    <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+  </nav>
+<% } %>
+</div>

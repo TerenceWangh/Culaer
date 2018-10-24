@@ -9,15 +9,6 @@
             <% } %>
         </div>
 
-        <!-- 标签云2 -->
-        <!-- 
-        <div id='tag_cloud' class="tags">
-            <% site.tags.map(function(tag){  %>
-                <a href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
-            <% }) %>
-        </div> 
-        -->
-
         <!-- 标签列表 -->
 
         <% site.tags.sort('name').map(function(tag){  %>

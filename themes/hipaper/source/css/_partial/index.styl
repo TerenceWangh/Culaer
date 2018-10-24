@@ -1,0 +1,144 @@
+post-time-space = 1em
+inner-circle-radius = 8px
+outer-circle-radius = 10px
+
+#index-main
+  position: relative
+  box-sizing: border-box
+  max-width: 720px;
+
+  &:before
+    content: ''
+    position: absolute
+    height: 100%
+    width: 6px
+    background: #666
+    
+    @media mq-timeline
+      content: none
+
+.post-entry
+  font-size: 16px
+  line-height: 1.5
+  margin: 1.5em 0
+  padding: 0 1.5em
+  position: relative
+  display: flex
+  align-items: center
+  
+  @media mq-timeline
+    flex-direction: column
+    padding: 0
+    margin: 3.5em 0
+    align-items: initial
+    
+    &:first-child
+      margin-top: 0
+
+  .post-time
+    flex: none
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+    font-size: 0.875rem
+    margin-right: 1rem
+    position: absolute
+    right: 100%
+    color: #999
+    transition: color .2s ease-in-out
+    white-space: nowrap
+    top: 50%
+
+    &:before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      background: #666
+      border-radius: 100%
+      left: "calc(100% + 1rem + %s/2 - %s)" % (vertical-bar-width outer-circle-radius)
+      top: "calc(50% - %s)" % outer-circle-radius
+    
+      @media mq-timeline
+        content: none
+        left: "calc(-%s - %s)" % (post-time-space outer-circle-radius)
+
+    &:after
+      content: ''
+      position: absolute
+      width: 16px
+      height: 16px
+      background: #fcf9e8
+      border-radius: 100%
+      transition: background-color .2s ease-in-out
+      left: "calc(100% + 1rem + %s/2 - %s)" % (vertical-bar-width inner-circle-radius)
+      top: "calc(50% - %s)" % inner-circle-radius
+
+      @media mq-timeline
+        content: none
+        left: "calc(-%s - %s)" % (post-time-space inner-circle-radius)
+
+    @media mq-timeline
+      order: 1
+      margin: auto
+      bottom: .2ex
+      left: 0
+      right: auto
+      color: #666
+      opacity: .6
+      top: auto
+
+  &:hover
+    .post-time
+      color: #666
+      &:after
+        background: #a1efe9
+
+  .post-desc
+    flex: 1
+
+    .post-title
+      border-bottom: 1px solid #eee
+      transition: border-color .2s ease
+      font-weight: 600
+      font-size: 1.2em
+
+      &:hover
+        border-bottom: 1px solid #666
+
+      a
+        color: #333
+        text-decoration: none
+        border: none
+        display: block
+        min-height: 1ex
+        outline: none
+
+    .post-meta
+      text-align: right
+      min-height: 2em
+      display: flex
+      align-items: flex-end
+      flex-direction: row-reverse
+      justify-content: flex-start
+
+    .post-tags
+      @extend $post-tags-template
+
+    .post-categories
+      @extend $post-tags-template
+
+      &:before
+        content: "\f07b"
+
+    @media mq-mobile
+      .post-tags
+        display:none
+      .post-categories
+        margin: 0
+
+    .post-content
+      padding-left: 2em
+      p
+        margin: .6em 0 0 0
+
+      @media mq-timeline
+        padding-left: 0

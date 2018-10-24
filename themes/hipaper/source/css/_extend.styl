@@ -62,3 +62,31 @@ $base-style
     list-style: decimal
   dt
     font-weight: bold
+
+$post-tags-template
+  display: inline-block
+  margin-left: .5rem
+  text-align: right
+  color: #666
+  font-size: 14px
+  opacity: .6
+  transition: opacity .3s ease-in-out
+  
+  &:hover
+    opacity: 1
+
+  &:before
+    content: "\f02c"
+    font-family: FontAwesome
+
+  a
+    text-decoration: none
+    outline: none
+    color: #666
+    margin: 0 .3rem
+
+    &:hover
+      color: #333
+      border-bottom: 2px solid #666
+
+    transition: border .2s ease-in-out
