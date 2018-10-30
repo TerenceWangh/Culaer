@@ -180,8 +180,8 @@ softmax的公式可以看作是对于图片$x_i$，以$W$为参数，分配给�
 
 ### 实际经验：数值稳定性
 当你实际在写Softmax的函数的时候，中间项$e^{f_{y_j}}$和$\sum_j{e^{f_j}}$可能会由于指数运算变得非常大。被一个很大的数除可能在数值上变得很不稳定，因此使用归一化的技巧变得非常重要。假设我们同时将分子和分母同时乘以一个常数$C$，那么我么会得到下面等式：
-$$ \frac{e^{f_{y_i}}}{\sum_j{e^{f_j}}} = \frac{Ce^{f_{y_i}}}{C\sum_j{e^{f_j}}} = /frac{e^{f_{y_i} + \logC}}{\sum_j{e^{f_j} + \logC}} $$
-我们能够自由选择$C$的值，但是我们的目标是保证数值的稳定。一个通常的选择是$\logC = -\max_j{f_j}$。也就是说我们保证向量$f$的最大值为0。代码如下：
+$$ \frac{e^{f_{y_i}}}{\sum_j{e^{f_j}}} = \frac{Ce^{f_{y_i}}}{C\sum_j{e^{f_j}}} = /frac{e^{f_{y_i} + \log C}}{\sum_j{e^{f_j} + \log C}} $$
+我们能够自由选择$C$的值，但是我们的目标是保证数值的稳定。一个通常的选择是$\log C = -\max_j{f_j}$。也就是说我们保证向量$f$的最大值为0。代码如下：
 ``` python
 f = np.array([123, 456, 789])
 p = np.exp(f) / np.sum(np.exp(f))   # bad, numberic problem, potential blowup.
