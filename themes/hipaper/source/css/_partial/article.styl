@@ -251,7 +251,7 @@
   float: right
   &:before
     content: "\f075"
-    font-family: font-icon
+    font-family: "FontAwesome"
     padding-right: 8px
 
 .article-share-link
@@ -260,7 +260,7 @@
   margin-left: 20px
   &:before
     content: "\f064"
-    font-family: font-icon
+    font-family: "FontAwesome"
     padding-right: 6px
 
 #article-nav
@@ -352,7 +352,7 @@ $article-share-link
   color: #999
   &:before
     font-size: 20px
-    font-family: font-icon
+    font-family: "FontAwesome"
     absolute-center(@font-size)
     text-align: center
   &:hover
@@ -407,39 +407,6 @@ $article-share-link
     display: block
     width: 100%
     margin: 0 auto
-/*
-$article-gallery-ctrl
-  position: absolute
-  top: 0
-  height: 100%
-  width: 60px
-  color: #fff
-  opacity: 0.3
-  transition: opacity 0.2s
-  cursor: pointer
-  &:hover
-    opacity: 0.8
-  &:before
-    font-size: 30px
-    font-family: font-icon
-    position: absolute
-    top: 50%
-    margin-top: @font-size * -0.5
-
-.article-gallery-prev
-  @extend $article-gallery-ctrl
-  left: 0
-  &:before
-    content: "\f053"
-    left: 15px
-
-.article-gallery-next
-  @extend $article-gallery-ctrl
-  right: 0
-  &:before
-    content: "\f054"
-    right: 15px*/
-
 
 /*toc*/
 .toc-article
