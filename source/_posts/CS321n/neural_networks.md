@@ -68,8 +68,8 @@ Maxout是对ReLU和leaky ReLU的一般化归纳，公式为：$\max(w_1^Tx + b_1
 **将神经网络作为神经元使用图片进行展示**：神经网络可以看成是一系列的神经元组成的，神经元之间使用无环图的方式进行连接。也就是说一部分神经元的输出是另一部分神经元的输入。在网络中不允许出现循环，以防止在前向传播的时候出现无限循环的情况。不像真正的神经元，神经网络中的神经元经常是分层的。普通的神经网络中最常用的是全连接层，用来对前后两层的神经元的成对连接，而在全连接层内部的神经元之间没有任何连接。下面两个图便是使用全连接层的神经网络模型：
 {% raw %}
 <div>
-  <img src="/CS321n/neural-networks/neural_net.jpg" width="40%" style="display: inline-block"/>
-  <img src="/CS321n/neural-networks/neural_net2.jpg" width="55%" style="display: inline-block; border-left: 1px solid black;" />
+  <img src="neural_net.jpg" width="40%" style="display: inline-block"/>
+  <img src="neural_net2.jpg" width="55%" style="display: inline-block; border-left: 1px solid black;" />
 </div>
 {% endraw %}
 
