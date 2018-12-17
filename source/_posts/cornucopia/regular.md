@@ -5,6 +5,7 @@ tags:
   - program
   - regular
 category: 杂项
+description: 正则表达式相关概念，基本的形式化语言理论以及基本语法操作。
 ---
 
 ## 基本概念

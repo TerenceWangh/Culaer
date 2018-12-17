@@ -4,6 +4,7 @@ date: 2018/12/16 16:39:46
 tags:
   - Linux
 category: 杂项
+description: 该文章记录Linux使用中的一些基本操作，现在有安装字体的方法。
 ---
 
 ## Linux安装字体

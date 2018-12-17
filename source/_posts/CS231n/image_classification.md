@@ -5,6 +5,7 @@ tags:
   - Machine Learning
   - CS231n
 category: CS231n
+description: 介绍图像识别的基本概念，当前需要解决的问题，图像识别算法实现的基本步骤。使用L1和L2距离、K近邻分类器实现对CIFAR-10数据集的分类。
 ---
 
 ## 图像分类主要面临的问题
